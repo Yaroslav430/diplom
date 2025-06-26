@@ -1,8 +1,13 @@
-package com.example.myapplication
+package com.example.myapplication.view
 
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.example.myapplication.view.Fragment.FavoritesFragment
+import com.example.myapplication.view.Fragment.HomeFragment
+import com.example.myapplication.R
 import com.example.myapplication.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -22,6 +27,7 @@ class MainActivity : AppCompatActivity() {
             .commit()
 
     }
+
     private fun initNavigation() {
 
         binding.navView.setOnNavigationItemSelectedListener {
@@ -35,16 +41,21 @@ class MainActivity : AppCompatActivity() {
                         .commit()
                     true
                 }
+
                 R.id.watch_later -> {
                     Toast.makeText(this, "Прочитать позже", Toast.LENGTH_SHORT).show()
                     true
                 }
+
                 R.id.selections -> {
                     Toast.makeText(this, "Подборки", Toast.LENGTH_SHORT).show()
                     true
                 }
+
                 else -> false
             }
         }
     }
-    }
+
+
+}

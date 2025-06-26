@@ -1,6 +1,9 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    id ("kotlin-parcelize")
+    id ("kotlin-kapt")
+
 }
 
 android {
@@ -40,7 +43,7 @@ android {
 
 dependencies {
 
-    implementation(libs.androidx.core.ktx)
+
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
     implementation(libs.androidx.constraintlayout)
@@ -51,7 +54,32 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
-    implementation ("com.google.dagger:dagger:2.55")
-    annotationProcessor ("com.google.dagger:dagger-compiler:2.55")
-    implementation ("androidx.core:core-ktx:1.16.0")
+    implementation(libs.dagger)
+    annotationProcessor(libs.dagger.compiler)
+    implementation(libs.androidx.core.ktx)
+
+    //MaterialDesign
+    implementation(libs.material)
+
+    //Coordinator layout
+    implementation(libs.androidx.coordinatorlayout)
+
+    //Glide
+    implementation(libs.glide)
+    annotationProcessor(libs.compiler)
+
+    //Retrofit
+    implementation(libs.retrofit)
+    implementation(libs.converter.gson)
+    implementation(libs.logging.interceptor)
+
+
+    //Room
+
+    implementation(libs.androidx.room.runtime)
+    kapt(libs.androidx.room.compiler)
+
+    implementation (libs.androidx.paging.runtime.ktx)
+
+    implementation (libs.google.api.client)
 }
