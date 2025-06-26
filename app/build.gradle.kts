@@ -81,5 +81,5 @@ dependencies {
 
     implementation (libs.androidx.paging.runtime.ktx)
 
-    implementation (libs.google.api.client)
+    
 }

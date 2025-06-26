@@ -93,7 +93,7 @@ class HomeFragment : Fragment() {
             bookAdapter =
                 BookListRecyclerAdapter(object : BookListRecyclerAdapter.OnItemClickListener {
                     override fun click(book: Book) {
-                        (requireActivity() as MainActivity)
+                        (requireActivity() as MainActivity).launchDetailsFragment(book)
                     }
                 })
 

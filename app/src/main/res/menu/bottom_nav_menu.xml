@@ -21,5 +21,9 @@
         android:id="@+id/home"
         android:icon="@drawable/ic_baseline_home_24"
         android:title="@string/menu_home_title_text"/>
+<item
+    android:id="@+id/recently"
+    android:icon="@drawable/baseline_preview_24"
+    android:title="@string/recently_viewed_title"/>
 
 </menu>
