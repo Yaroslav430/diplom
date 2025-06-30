@@ -1,17 +1,20 @@
 package com.example.myapplication.view
 
 import android.os.Bundle
+
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication.view.Fragment.FavoritesFragment
 import com.example.myapplication.view.Fragment.HomeFragment
 import com.example.myapplication.R
+import com.example.myapplication.data.Entity.Book
 import com.example.myapplication.databinding.ActivityMainBinding
+import com.example.myapplication.view.Fragment.DetailsFragment
+import com.example.myapplication.view.Fragment.RecentlyFragment
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,6 +23,7 @@ class MainActivity : AppCompatActivity() {
 
         initNavigation()
 
+
         supportFragmentManager
             .beginTransaction()
             .add(R.id.fragment_placeholder, HomeFragment())
@@ -27,6 +31,20 @@ class MainActivity : AppCompatActivity() {
             .commit()
 
     }
+
+    fun launchDetailsFragment(book: Book) {
+        val bundle = Bundle()
+        bundle.putParcelable("book", book)
+        val fragment = DetailsFragment()
+        fragment.arguments = bundle
+
+        supportFragmentManager
+            .beginTransaction()
+            .replace(R.id.fragment_placeholder, fragment)
+            .addToBackStack(null)
+            .commit()
+    }
+
 
     private fun initNavigation() {
 
@@ -51,11 +69,19 @@ class MainActivity : AppCompatActivity() {
                     Toast.makeText(this, "Подборки", Toast.LENGTH_SHORT).show()
                     true
                 }
+                R.id.recently -> {
+                    supportFragmentManager
+                        .beginTransaction()
+                        .replace(R.id.fragment_placeholder, RecentlyFragment())
+                        .addToBackStack(null)
+                        .commit()
+                    true
+                }
+
+
 
                 else -> false
-            }
         }
     }
-
-
+    }
 }

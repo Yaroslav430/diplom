@@ -11,4 +11,5 @@
     <string name="menu_settings_title">Настройки</string>
     <string name="menu_favorites_title">Избранное</string>
     <string name="menu_home_title_text">Главная</string>
+    <string name="recently_viewed_title">Недавно просмотренные</string>
 </resources>

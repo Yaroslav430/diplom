@@ -1,43 +1,41 @@
 package com.example.myapplication.view.Fragment
 
 import android.os.Bundle
-
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.myapplication.data.Entity.Book
-import com.example.myapplication.databinding.FragmentFavoritesBinding
+import com.example.myapplication.databinding.FragmentRecentlyBinding
 import com.example.myapplication.view.MainActivity
 import com.example.myapplication.view.rv_adapters.BookListRecyclerAdapter
 
 
+class RecentlyFragment : Fragment() {
 
-class FavoritesFragment : Fragment() {
     private lateinit var bookAdapter: BookListRecyclerAdapter
-    private lateinit var binding: FragmentFavoritesBinding
-
+    private lateinit var binding: FragmentRecentlyBinding
 
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentFavoritesBinding.inflate(inflater, container, false)
+        binding = FragmentRecentlyBinding.inflate(inflater, container, false)
         return binding.root
 
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val favoritesList: List<Book> = emptyList()
+        val recentlyList: List<Book> = emptyList()
 
 
 
 
 
-        binding.favoritesRecycler.apply {
+        binding.recentlyRecycler.apply {
             bookAdapter =
                 BookListRecyclerAdapter(object : BookListRecyclerAdapter.OnItemClickListener {
                     override fun click(book: Book) {
@@ -50,12 +48,6 @@ class FavoritesFragment : Fragment() {
 
         }
 
-        bookAdapter.addItems(favoritesList)
+        bookAdapter.addItems(recentlyList)
     }
-
 }
-
-
-
-
-
