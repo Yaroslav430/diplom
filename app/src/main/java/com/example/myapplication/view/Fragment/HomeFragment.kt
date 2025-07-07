@@ -9,7 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.myapplication.PaginationScrollListener
+import com.example.myapplication.pagination.PaginationScrollListener
 import com.example.myapplication.data.Entity.Book
 import com.example.myapplication.databinding.FragmentHomeBinding
 import com.example.myapplication.view.MainActivity

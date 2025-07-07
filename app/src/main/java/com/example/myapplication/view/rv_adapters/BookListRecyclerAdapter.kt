@@ -8,7 +8,7 @@ import com.example.myapplication.view.rv_viewholders.BookViewHolder
 import com.example.myapplication.R
 
 class BookListRecyclerAdapter(private val clickListener: OnItemClickListener) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
-    val items = mutableListOf<Book>()
+    private val items = mutableListOf<Book>()
 
     override fun getItemCount() = items.size
 

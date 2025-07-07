@@ -17,7 +17,6 @@ class RecentlyFragment : Fragment() {
     private lateinit var bookAdapter: BookListRecyclerAdapter
     private lateinit var binding: FragmentRecentlyBinding
 
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -31,10 +30,6 @@ class RecentlyFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         val recentlyList: List<Book> = emptyList()
 
-
-
-
-
         binding.recentlyRecycler.apply {
             bookAdapter =
                 BookListRecyclerAdapter(object : BookListRecyclerAdapter.OnItemClickListener {
@@ -45,9 +40,7 @@ class RecentlyFragment : Fragment() {
             adapter = bookAdapter
             layoutManager = LinearLayoutManager(requireContext())
 
-
         }
-
         bookAdapter.addItems(recentlyList)
     }
 }

@@ -12,4 +12,11 @@
     <string name="menu_favorites_title">Избранное</string>
     <string name="menu_home_title_text">Главная</string>
     <string name="recently_viewed_title">Недавно просмотренные</string>
+    <string name="notification_cancel">cancel</string>
+    <string name="time">Напомнить</string>
+    <string name="radio_button_popular">Популярные</string>
+    <string name="radio_button_top_rated">Топ</string>
+    <string name="radio_button_upcoming">Скоро</string>
+    <string name="radio_button_playing">В магазинах</string>
+    <string name="radio_group_header">Подборка на главном экране:</string>
 </resources>

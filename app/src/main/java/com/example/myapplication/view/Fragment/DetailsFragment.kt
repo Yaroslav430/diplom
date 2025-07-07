@@ -55,7 +55,6 @@ class DetailsFragment : Fragment() {
         @Suppress("DEPRECATION")
         book = arguments?.get("book") as Book
 
-
         binding.detailsToolbar.title = book.title
         Glide.with(this)
             .load(ApiConstants.IMAGES_URL + "w780" + book.poster)
