@@ -25,9 +25,12 @@ class Interactor(private val repo: MainRepository, private val retrofitService: 
             }
         })
     }
+    fun saveDefaultCategoryToPreferences(category: String) {
+        preferences.saveDefaultCategory(category)
+    }
 
 
-    private fun getDefaultCategoryFromPreferences() = preferences.geDefaultCategory()
+    fun getDefaultCategoryFromPreferences() = preferences.geDefaultCategory()
 
     fun getBooksFromDB(): List<Book> = repo.getAllFromDB()
 }

@@ -3,7 +3,80 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/settings_fragment_root"
     tools:context=".view.Fragment.SettingsFragment">
 
+    <RadioGroup
+        android:id="@+id/radio_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue"
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/theme"
+            android:layout_width="wrap_content"
+            android:layout_height="68dp"
+            android:layout_gravity="bottom|right"
+            android:backgroundTint="@color/blue"
+            android:contentDescription="TODO"
+            app:layout_anchor="@id/radio_group"
+            app:srcCompat="@drawable/baseline_mode_night_24"
+            app:tint="@android:color/white"
+            tools:ignore="ContentDescription,HardcodedText,RtlHardcoded,ImageContrastCheck" />
+
+        <TextView
+            android:id="@+id/very"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="@string/radio_group_header"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:textColor="@android:color/white"
+            tools:ignore="TextContrastCheck" />
+
+        <RadioButton
+            android:id="@+id/radio_popular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:text="@string/radio_button_popular"
+            android:textColor="@android:color/white"
+            tools:ignore="TextContrastCheck,VisualLintButtonSize" />
+
+        <RadioButton
+            android:id="@+id/radio_top_rated"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:text="@string/radio_button_top_rated"
+            android:textColor="@android:color/white"
+            tools:ignore="TextContrastCheck,VisualLintButtonSize" />
+
+        <RadioButton
+            android:id="@+id/radio_upcoming"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:text="@string/radio_button_upcoming"
+            android:textColor="@android:color/white"
+            tools:ignore="TextContrastCheck,VisualLintButtonSize" />
+
+        <RadioButton
+            android:id="@+id/radio_now_playing"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:text="@string/radio_button_playing"
+            android:textColor="@android:color/white"
+            tools:ignore="TextContrastCheck,VisualLintButtonSize" />
+
+    </RadioGroup>
 
 </FrameLayout>

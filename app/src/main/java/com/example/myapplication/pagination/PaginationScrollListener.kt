@@ -1,4 +1,4 @@
-package com.example.myapplication
+package com.example.myapplication.pagination
 
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView

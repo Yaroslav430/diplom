@@ -1,6 +1,6 @@
 package com.example.myapplication.di
 
-import com.example.myapplication.viewmodel.HomeFragmentViewModel
+import com.example.myapplication.viewmodel.SettingsFragmentViewModel
 import dagger.Component
 import javax.inject.Singleton
 
@@ -8,6 +8,6 @@ import javax.inject.Singleton
 @Component(
 )
 interface AppComponent {
-    fun inject(homeFragmentViewModel: HomeFragmentViewModel)
+    fun inject(homeFragmentViewModel: SettingsFragmentViewModel)
 
 }
